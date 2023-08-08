@@ -39,6 +39,8 @@ export default function AuthProvider({ children }) {
   function login(email, password) {
     if (email === FAKE_USER.email && password === FAKE_USER.password) {
       dispatch({ type: "login", payload: FAKE_USER });
+    } else {
+      alert("Email or Password doesn't match");
     }
   }
   function logout() {
